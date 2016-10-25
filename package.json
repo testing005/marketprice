@@ -1,0 +1,22 @@
+{
+	"name":"get market price",
+	"version":"1.0.0",
+	"description":"get market price",
+	"engines":{
+		"node":"4.6.0"
+	},
+	"main":"index.js",
+	"scripts":{
+		"start":"node index.js"
+	},
+	"dependencies":{
+		"express":"4.14.0",
+		"steam-market-pricing":"1.0.4"
+	},
+	"repository":{
+		"type":"git",
+		"url":
+	},
+	"keywords":["steam","market","price"],
+	
+}
