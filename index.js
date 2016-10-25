@@ -16,8 +16,10 @@ app.get("/",function(req,res){
 			res.writeHead(200,{"Content-Type":"text/html"});
 			res.write("<p>this is working</p>");
 			res.write(name);
-			res.write(data);
+			res.write(data.median_price);
 			res.end();
+		}else{
+		res.write(err);
 		}
 	});
 
