@@ -13,6 +13,8 @@ app.get("/price",function(req,res){
 	market.getItemPrice(570,name,function(err,data){
 		if(!err){
 			res.send(data);
+			res.send("Hello this works but not above");
+			res.close();
 		}
 	});
 
