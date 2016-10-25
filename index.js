@@ -4,7 +4,7 @@ var express=require('express');
 var app=new express();
 var market=require('steam-market-pricing');
 
-app.listen(process.env.port||5000,function(){
+app.listen(process.env.PORT||5000,function(){
 	console.log("running on port 5000");
 });
 
