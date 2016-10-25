@@ -16,6 +16,6 @@ app.get("/",function(req,res){
 		}
 	});*/
 
-    res.send("Hello worked");ss
+    res.send("Hello worked");
    
 });
