@@ -12,7 +12,7 @@ app.get("/",function(req,res){
 	var name=req.query.name;
 	market.getItemPrice(570,name,function(err,data){
 		if(!err){
-			res.json(data);
+			res.send(data);
 		}
 	});
 
