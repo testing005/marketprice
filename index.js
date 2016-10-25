@@ -9,11 +9,12 @@ app.listen(process.env.PORT||5000,function(){
 });
 
 app.get("/price",function(req,res){
-	var name=req.query.name;
+	var name="wibbley"
 	console.log(name);
 	market.getItemPrice(570,name,function(err,data){
 		if(!err){
 			res.send("Hello this works but not above");
+			res.send(name);
 			res.send(data);
 			
 			res.close();
