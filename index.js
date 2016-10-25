@@ -13,11 +13,11 @@ app.get("/",function(req,res){
 	console.log(name);
 	market.getItemPrice(570,name,function(err,data){
 		if(!err){
-			res.send("Hello this works but not above");
-			res.send(name);
-			res.send(data);
-			
-			res.close();
+			res.writeHead(200,{"Content-Type":"text/html"});
+			res.write("<p>this is working</p>");
+			res.write(name);
+			res.write(data);
+			res.end();
 		}
 	});
 
