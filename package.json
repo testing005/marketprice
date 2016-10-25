@@ -1,9 +1,9 @@
 {
-	"name":"get market price",
-	"version":"1.0.0",
+	"name":"marketprice",
+	"version":"0.2.5",
 	"description":"get market price",
 	"engines":{
-		"node":"4.6.0"
+		"node":"5.9.1"
 	},
 	"main":"index.js",
 	"scripts":{
@@ -15,7 +15,7 @@
 	},
 	"repository":{
 		"type":"git",
-		"url":"https://github.com/testing005/marketprice/"
+		"url":"https://github.com/testing005/marketprice"
 	},
 	"keywords":["steam","market","price"]
 	
