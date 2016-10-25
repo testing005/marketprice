@@ -9,13 +9,12 @@ app.listen(process.env.PORT||5000,function(){
 });
 
 app.get("/",function(req,res){
-	/*var name=req.param('name');
+	var name=req.param('name');
 	market.getItemPrice(570,name,function(err,data){
 		if(!err){
 			res.json(data);
 		}
-	});*/
+	});
 
-    res.send("Hello worked");
-   
+       
 });
