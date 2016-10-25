@@ -8,8 +8,8 @@ app.listen(process.env.PORT||5000,function(){
 	console.log("running on port 5000");
 });
 
-app.get("/price",function(req,res){
-	var name="wibbley"
+app.get("/",function(req,res){
+	var name="wibbley";
 	console.log(name);
 	market.getItemPrice(570,name,function(err,data){
 		if(!err){
