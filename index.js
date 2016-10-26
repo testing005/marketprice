@@ -20,16 +20,14 @@ app.get("/price",function(req,res){
 	res.write(JSON.stringify(test));
 	//res.write(items);
 	market.getItemsPrice(570,item,function(data){
-		if(!err){console.log(data);
+		console.log(data);
 			 for(var i in item) {
         console.log(item[i] + ' median price: ' + data[item[i]]['median_price']);
     }
                         res.writeHead(200,{"Content-Type":"application/json"});
 			res.write(data);
 			res.end();
-		}else{
-		res.write("error");
-		}
+		
 	});
 
        
