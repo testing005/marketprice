@@ -11,6 +11,7 @@ app.listen(process.env.PORT||5000,function(){
 app.get("/price",function(req,res){
 	var name=req.query.name;
 	console.log(name);
+	res.write(name);
 	//var items=name.split(",");
 	//console.log(items);
 	//res.write(items);
