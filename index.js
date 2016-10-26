@@ -11,16 +11,16 @@ app.listen(process.env.PORT||5000,function(){
 app.get("/price",function(req,res){
 	var name=req.query.name;
 	console.log(name);
-	//var items=name.split(",");
+	var items=name.split(",");
 	
 	//console.log(items);
 	var test={"name":"nodejstesting","host":"heroku"};
 	res.write(JSON.stringify(test));
 	//res.write(items);
-	market.getItemsPrice(570,name,function(err,data){
+	market.getItemsPrice(570,items,function(err,data){
 		if(!err){console.log(data);
                         res.writeHead(200,{"Content-Type":"application/json"});
-			res.write(data);
+			res.write(data.toString());
 			res.end();
 		}else{
 		res.write(err);
