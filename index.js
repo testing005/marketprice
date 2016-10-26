@@ -19,8 +19,7 @@ app.get("/price",function(req,res){
 		for(var i in item) {
         //res.write(" "+"\""+item[i]+"\"" + ':' +"\""+data[item[i]]['median_price']+"\"");
 			pdata[item[i]]=data[item[i]]['median_price'];
-			res.write(""+pdata[item[i]]);
-    }
+		}
 		 res.write(""+JSON.stringify(pdata));
 		//res.write("}}");
 			
