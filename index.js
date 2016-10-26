@@ -14,6 +14,7 @@ app.get("/price",function(req,res){
 	res.write(name);
 	var items=name.split(",");
 	console.log(items);
+	res.send(items)
 	//res.write(items);
 	/*market.getItemsPrice(570,items,function(err,data){
 		if(!err){
@@ -25,5 +26,5 @@ app.get("/price",function(req,res){
 		}
 	});*/
 
-       
+       res.end();
 });
