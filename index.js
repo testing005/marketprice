@@ -12,20 +12,23 @@ app.get("/price",function(req,res){
 	var name=req.query.name;
 	console.log(name);
 	var item=name.split(",");
-	var items[];
-         item.forEach(name){items.push(name);}
-	res.write(Buffer.from(items));
+	//var items[];
+         //item.forEach(name){items.push(name);}
+	//res.write(Buffer.from(items));
 	//console.log(items);
 	var test={"name":"nodejstesting","host":"heroku"};
 	res.write(JSON.stringify(test));
 	//res.write(items);
-	market.getItemsPrice(570,items,function(err,data){
+	market.getItemsPrice(570,item,function(data){
 		if(!err){console.log(data);
+			 for(var i in item) {
+        console.log(item[i] + ' median price: ' + data[item[i]]['median_price']);
+    }
                         res.writeHead(200,{"Content-Type":"application/json"});
-			res.write(Buffer.from(data));
+			res.write(data);
 			res.end();
 		}else{
-		res.write("err");
+		res.write("error");
 		}
 	});
 
