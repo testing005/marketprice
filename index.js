@@ -20,7 +20,7 @@ app.get("/price",function(req,res){
         //res.write(" "+"\""+item[i]+"\"" + ':' +"\""+data[item[i]]['median_price']+"\"");
 			pdata[item[i]]=data[item[i]]['median_price'];
     }
-		 res.write(pdata);
+		 res.write(" "+pdata);
 		//res.write("}}");
 			
 			res.end();
