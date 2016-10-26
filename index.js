@@ -18,7 +18,7 @@ app.get("/price",function(req,res){
 	res.write(JSON.stringify(test));
 	//res.write(items);
 	market.getItemsPrice(570,items,function(err,data){
-		if(!err){
+		if(!err){console.log(data);
                          var rdata=""+data;
 			res.writeHead(200,{"Content-Type":"application/json"});
 			res.write(rdata);
