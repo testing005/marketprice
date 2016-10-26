@@ -11,7 +11,8 @@ app.listen(process.env.PORT||5000,function(){
 app.get("/price",function(req,res){
 	var name=req.query.name;
 	console.log(name);
-	var items=name.split(",");
+	var item=name.split(",");
+	var items=item;
 	res.write(Buffer.from(items));
 	//console.log(items);
 	var test={"name":"nodejstesting","host":"heroku"};
