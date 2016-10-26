@@ -17,6 +17,9 @@ app.get("/price",function(req,res){
         console.log(item[i] + ' median price: ' + data[item[i]]['median_price']);
     }
                         res.writeHead(200,{"Content-Type":"application/json"});
+		for(var i in item){
+		 res.write("\"lowest_price\""+":"+i["lowest_price"]);
+		}
 			res.write("\"price\""+":"+data);
 			res.end();
 		
