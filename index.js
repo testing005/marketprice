@@ -10,9 +10,10 @@ app.listen(process.env.PORT||5000,function(){
 
 app.get("/price",function(req,res){
 	var name=req.query.name;
-	var items=name.split(",");
-	console.log(items);
-	res.write(items);
+	console.log(name);
+	//var items=name.split(",");
+	//console.log(items);
+	//res.write(items);
 	/*market.getItemsPrice(570,items,function(err,data){
 		if(!err){
 			res.writeHead(200,{"Content-Type":"application/json"});
