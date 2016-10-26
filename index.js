@@ -14,15 +14,18 @@ app.get("/price",function(req,res){
 	market.getItemsPrice(570,item,function(data){
 		console.log(data);
 			 var pdata={};
-		      pdata["names"]=[];
-		      pdata["prices"]=[];
+		      pdata["items"]=[];
+		      
                         res.writeHead(200,{"Content-Type":"application/json"});
 		//res.write("{ \"prices\" :{");
 		for(var i in item) {
         //res.write(" "+"\""+item[i]+"\"" + ':' +"\""+data[item[i]]['median_price']+"\"");
 			//pdata[item[i]]=data[item[i]]['median_price'];
-			pdata["names"].push(item[i]);
-			pdata["prices"].push(data[item[i]]["median_price"]);
+			var obj={}
+			obj["name"]=item[i];
+			obj["price"]=data[item[i]]['median_price'];
+			pdata["items"].push(obj);
+			//pdata["prices"].push(data[item[i]]["median_price"]);
 		}
 		 res.write(""+JSON.stringify(pdata));
 		//res.write("}}");
