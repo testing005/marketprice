@@ -18,15 +18,15 @@ app.get("/price",function(req,res){
 	console.log(items);
 	
 	//res.write(items);
-	/*market.getItemsPrice(570,items,function(err,data){
+	market.getItemsPrice(570,items,function(err,data){
 		if(!err){
 			res.writeHead(200,{"Content-Type":"application/json"});
-			res.write(data);
+			res.write(JSON.stringify(data));
 			res.end();
 		}else{
 		res.write(err);
 		}
-	});*/
+	});
 
        res.end();
 });
