@@ -17,7 +17,7 @@ app.get("/price",function(req,res){
 	var test={"name":"nodejstesting","host":"heroku"};
 	res.write(JSON.stringify(test));
 	//res.write(items);
-	/*market.getItemsPrice(570,items,function(err,data){
+	market.getItemsPrice(570,items,function(err,data){
 		if(!err){
 			res.writeHead(200,{"Content-Type":"application/json"});
 			res.write(JSON.stringify(data));
@@ -25,7 +25,7 @@ app.get("/price",function(req,res){
 		}else{
 		res.write(err);
 		}
-	});*/
+	});
 
        
 });
