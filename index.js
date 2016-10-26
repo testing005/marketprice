@@ -17,7 +17,7 @@ app.get("/price",function(req,res){
         console.log(item[i] + ' median price: ' + data[item[i]]['median_price']);
     }
                         res.writeHead(200,{"Content-Type":"application/json"});
-			res.write(data);
+			res.write(Buffer.from(data));
 			res.end();
 		
 	});
