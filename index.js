@@ -23,7 +23,7 @@ app.get("/price",function(req,res){
 			res.write(Buffer.from(data));
 			res.end();
 		}else{
-		res.write(err);
+		res.write("err");
 		}
 	});
 
