@@ -12,7 +12,7 @@ app.get("/price",function(req,res){
 	var name=req.query.name;
 	var items=name.split(",");
 	console.log(items);
-	/*market.getItemPrice(570,items,function(err,data){
+	market.getItemsPrice(570,items,function(err,data){
 		if(!err){
 			res.writeHead(200,{"Content-Type":"application/json"});
 			res.write("{\"price\""+":\""+data.median_price+"\"}");
@@ -21,6 +21,6 @@ app.get("/price",function(req,res){
 		res.write(err);
 		}
 	});
-*/
+
        
 });
