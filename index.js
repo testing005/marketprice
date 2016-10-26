@@ -11,10 +11,12 @@ app.listen(process.env.PORT||5000,function(){
 app.get("/price",function(req,res){
 	var name=req.query.name;
 	console.log(name);
-	res.write(name);
 	var items=name.split(",");
+	res.send(items);
+	res.write(name);
+	
 	console.log(items);
-	res.send(items)
+	
 	//res.write(items);
 	/*market.getItemsPrice(570,items,function(err,data){
 		if(!err){
