@@ -12,7 +12,7 @@ app.get("/price",function(req,res){
 	var name=req.query.name;
 	console.log(name);
 	var items=name.split(",");
-	res.write(items);
+	res.write(items.toString());
 	res.write(name);
 	
 	console.log(items);
