@@ -10,8 +10,9 @@ app.listen(process.env.PORT||5000,function(){
 
 app.get("/price",function(req,res){
 	var name=req.query.name;
+	var items[]=name.split(",");
 	console.log(name);
-	market.getItemPrice(570,name,function(err,data){
+	market.getItemPrice(570,items,function(err,data){
 		if(!err){
 			res.writeHead(200,{"Content-Type":"application/json"});
 			res.write("{\"price\""+":\""+data.median_price+"\"}");
