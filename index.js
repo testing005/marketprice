@@ -13,7 +13,7 @@ app.get("/price",function(req,res){
 	console.log(name);
 	var item=name.split(",");
 	var items[];
-         item.forEach(item){items.push(item);}
+         item.forEach(name){items.push(name);}
 	res.write(Buffer.from(items));
 	//console.log(items);
 	var test={"name":"nodejstesting","host":"heroku"};
