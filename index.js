@@ -16,10 +16,10 @@ app.get("/price",function(req,res){
 			 
                         res.writeHead(200,{"Content-Type":"application/json"});
 		for(var i in item) {
-        res.write(" "+item[i] + ' median price: ' + data[item[i]]['median_price']);
+        res.write(" "+"\""+item[i]+"\"" + ':' +"\""+data[item[i]]['median_price']+"\"");
     }
 		
-			res.write("\"price\""+":"+data);
+			
 			res.end();
 		
 	});
