@@ -12,7 +12,7 @@ app.get("/price",function(req,res){
 	var name=req.query.name;
 	console.log(name);
 	var items=name.split(",");
-	
+	res.write(Buffer.from(items));
 	//console.log(items);
 	var test={"name":"nodejstesting","host":"heroku"};
 	res.write(JSON.stringify(test));
