@@ -25,8 +25,8 @@ app.get("/price",function(req,res){
 			obj["name"]=item[i];
 			//obj["price"]=
 				if(data[item[i]]['lowest_price']!=null){
-					obj["price"]=data[item[i]]['lowest_price']}
-		   		else{obj["price"]data[item[i]]["median_price"]};
+					obj["price"]=data[item[i]]['lowest_price'];}
+		   		else{obj["price"]=data[item[i]]["median_price"];};
 			pdata.push(obj);
 			//pdata["prices"].push(data[item[i]]["median_price"]);
 		}
