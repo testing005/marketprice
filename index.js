@@ -23,7 +23,7 @@ app.get("/price",function(req,res){
 			//pdata[item[i]]=data[item[i]]['median_price'];
 			var obj={}
 			obj["name"]=item[i];
-			obj["price"]=data[[item[i]]['lowest_price'];
+			obj["price"]=data[[item[i]]['lowest_price']
 				/*if(data[item[i]]['lowest_price']!=null){
 					obj["price"]=data[item[i]]['lowest_price'];}
 		   		else{obj["price"]=data[item[i]]["median_price"];};*/
