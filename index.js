@@ -13,8 +13,8 @@ app.get("/price",function(req,res){
 	var item=name.split(",");
 	market.getItemsPrice(570,item,function(data){
 		console.log(data);
-			 var pdata={};
-		      pdata["items"]=[];
+			 var pdata=[];
+		      
 		      
                         res.writeHead(200,{"Content-Type":"application/json"});
 		//res.write("{ \"prices\" :{");
@@ -24,7 +24,7 @@ app.get("/price",function(req,res){
 			var obj={}
 			obj["name"]=item[i];
 			obj["price"]=data[item[i]]['lowest_price'];
-			pdata["items"].push(obj);
+			pdata.push(obj);
 			//pdata["prices"].push(data[item[i]]["median_price"]);
 		}
 		 res.write(""+JSON.stringify(pdata));
