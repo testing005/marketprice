@@ -23,7 +23,8 @@ app.get("/price",function(req,res){
 			//pdata[item[i]]=data[item[i]]['median_price'];
 			var obj={}
 			obj["name"]=item[i];
-			obj["price"]=data[item[i]]['median_price'];
+			obj["mprice"]=data[item[i]]['median_price'];
+			obj["lprice"]=data[item[i]]['lowest_price'];
 			console.log(obj);
 			
 			pdata.push(obj);
