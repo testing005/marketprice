@@ -21,9 +21,9 @@ app.get("/price",function(req,res){
 		for(var i in item) {
         //res.write(" "+"\""+item[i]+"\"" + ':' +"\""+data[item[i]]['median_price']+"\"");
 			//pdata[item[i]]=data[item[i]]['median_price'];
-			var obj={}
+			var obj={};
 			obj["name"]=item[i];
-			obj["price"]=data[[item[i]]['lowest_price']
+			obj["price"]=data[[item[i]]['lowest_price'];
 				/*if(data[item[i]]['lowest_price']!=null){
 					obj["price"]=data[item[i]]['lowest_price'];}
 		   		else{obj["price"]=data[item[i]]["median_price"];};*/
